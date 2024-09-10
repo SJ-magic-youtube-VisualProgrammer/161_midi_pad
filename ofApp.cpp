@@ -122,7 +122,7 @@ void ofApp::draw(){
 	
 	for( int i = 0; !midi_messages.empty(); i++ ){
 		ofxMidiMessage &message = midi_messages.front();
-		midi_messages.pop();
+		// midi_messages.pop();
 		
 		int x = 10;
 		int y = i * 40 + 40;
@@ -176,6 +176,9 @@ void ofApp::draw(){
 		ofSetColor(0);
 		ofDrawBitmapString(text.str(), x, y);
 		text.str(""); // clear
+		
+		
+		midi_messages.pop();
 	}
 }
 

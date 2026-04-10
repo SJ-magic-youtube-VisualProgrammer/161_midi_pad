@@ -187,7 +187,7 @@ void ofApp::draw(){
 void ofApp::SendMidi_AllNoteOff(){
 	/********************
 	********************/
-	for(int i = 0; i <= 0; i++){
+	for(int i = 0; i <= 127; i++){
 		midi_out_.sendNoteOff(1, i, 127);
 	}
 }
